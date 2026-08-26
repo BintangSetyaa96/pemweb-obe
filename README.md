@@ -1,10 +1,10 @@
 # Praktikum Pemrograman Web - OBE
 
 ## Identitas Mata Kuliah
-* **Mata Kuliah:** Praktikum Pemrograman Web
-* **Nama:** Bintang Setya
-* **NIM:** (Isi dengan NIM Anda)
-* **Kelas:** (Isi dengan kelas Anda)
+* **Mata Kuliah:** Pemrograman Web
+* **Nama:** Muhammad Bintang Prasetya
+* **NIM:** (2440304023)
+* **Semester:** (5)
 
 ## Deskripsi Singkat Proyek
 Proyek ini merupakan lembar kerja atau tugas berbasis Outcome-Based Education (OBE) untuk Praktikum Pemrograman Web yang dikembangkan menggunakan lingkungan lokal Laragon.
