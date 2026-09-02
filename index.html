@@ -1,11 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Praktikum Pemrograman Web</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistem Pemantauan Alat Pemanggil Ikan</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Praktikum Pemrograman Web</h1>
+
+    <header>
+        <!-- CONTOH GAMBAR DEKORATIF (Logo di folder images) -->
+        <img src="images/logo-ubt.jpg" alt="" width="40">
+        
+        <h1>Sistem Pemantauan Alat Pemanggil Ikan Tarakan</h1>
+        <nav>
+            <a href="#tentang">Tentang</a>
+            <a href="#fitur">Fitur</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="tentang">
+            <h2>Tentang Proyek</h2>
+            <article>
+                <h3>Pengantar Sistem Pesisir Tarakan</h3>
+                <p>Sistem informasi pemantauan alat pemanggil ikan berbasis web untuk nelayan di Tarakan.</p>
+                
+                <!-- CONTOH GAMBAR INFORMATIF (Foto alat di folder images) -->
+                <img src="images/alat-ikan.png" alt="Ilustrasi perangkat keras alat pemanggil ikan yang dipasang di perairan pesisir" width="300">
+            </article>
+        </section>
+
+        <section id="fitur">
+            <h2>Fitur Utama</h2>
+            <article>
+                <h3>Dashboard IoT</h3>
+                <p>Memantau status aktif dan non-aktif perangkat di perairan secara real-time.</p>
+            </article>
+        </section>
+
+        <section id="kontak">
+            <h2>Kontak & Laporan Kendala</h2>
+            <p>Silakan isi form di bawah ini untuk melaporkan kondisi perangkat atau menghubungi pengelola:</p>
+            
+            <form>
+                <!-- Label terikat dengan input nama lewat atribut for="nama" dan id="nama" -->
+                <div>
+                    <label for="nama">Nama Lengkap:</label><br>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+                </div>
+                
+                <br>
+
+                <!-- Label terikat dengan input email lewat atribut for="email" dan id="email" -->
+                <div>
+                    <label for="email">Alamat Email:</label><br>
+                    <input type="email" id="email" name="email" placeholder="nelayan@tarakan.com" required>
+                </div>
+                
+                <br>
+
+                <!-- Label terikat dengan textarea pesan lewat atribut for="pesan" dan id="pesan" -->
+                <div>
+                    <label for="pesan">Pesan / Kendala Alat:</label><br>
+                    <textarea id="pesan" name="pesan" rows="4" placeholder="Tuliskan kendala perangkat di sini..." required></textarea>
+                </div>
+                
+                <br>
+
+                <button type="submit">Kirim Laporan</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Teknik Komputer UBT</p>
+    </footer>
+
 </body>
 </html>
