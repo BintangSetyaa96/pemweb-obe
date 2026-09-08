@@ -9,7 +9,7 @@
 <body>
 
     <header>
-        <!-- CONTOH GAMBAR DEKORATIF (Logo di folder images) -->
+        <!-- 1. GAMBAR DEKORATIF PERTAMA (Atribut alt kosong) -->
         <img src="images/logo-ubt.jpg" alt="" width="40">
         
         <h1>Sistem Pemantauan Alat Pemanggil Ikan Tarakan</h1>
@@ -28,8 +28,11 @@
                 <h3>Pengantar Sistem Pesisir Tarakan</h3>
                 <p>Sistem informasi pemantauan alat pemanggil ikan berbasis web untuk nelayan di Tarakan.</p>
                 
-                <!-- CONTOH GAMBAR INFORMATIF (Foto alat di folder images) -->
+                <!-- 1. GAMBAR INFORMATIF PERTAMA (Menjelaskan foto perangkat) -->
                 <img src="images/alat-ikan.png" alt="Ilustrasi perangkat keras alat pemanggil ikan yang dipasang di perairan pesisir" width="300">
+                
+                <!-- 2. GAMBAR INFORMATIF KEDUA (Menjelaskan diagram/skema) -->
+                <img src="images/diagram-sistem.png" alt="Diagram alur komunikasi data IoT pemanggil ikan dengan server pusat Tarakan" width="300">
             </article>
         </section>
 
@@ -38,6 +41,22 @@
             <article>
                 <h3>Dashboard IoT</h3>
                 <p>Memantau status aktif dan non-aktif perangkat di perairan secara real-time.</p>
+                
+                <!-- 2. GAMBAR DEKORATIF KEDUA (Atribut alt kosong untuk hiasan) -->
+                <img src="images/ornamen-garis.png" alt="" width="150">
+            </article>
+        </section>
+
+        <section id="tautan-luar">
+            <h2>Informasi Pengembang</h2>
+            <article>
+                <h3>Dokumentasi Kode</h3>
+                <p>Kunjungi repository resmi untuk melihat pembaruan kode sumber proyek ini:</p>
+                
+                <!-- 3. GAMBAR BERFUNGSI SEBAGAI LINK (Atribut alt menjelaskan tujuan tautan) -->
+                <a href="https://github.com/BintangSetyaa96/pemweb-obe" target="_blank">
+                    <img src="images/banner-github.png" alt="Tautan menuju halaman Repository GitHub proyek sistem pemantauan" width="200">
+                </a>
             </article>
         </section>
 
@@ -46,7 +65,6 @@
             <p>Silakan isi form di bawah ini untuk melaporkan kondisi perangkat atau menghubungi pengelola:</p>
             
             <form>
-                <!-- Label terikat dengan input nama lewat atribut for="nama" dan id="nama" -->
                 <div>
                     <label for="nama">Nama Lengkap:</label><br>
                     <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
@@ -54,7 +72,6 @@
                 
                 <br>
 
-                <!-- Label terikat dengan input email lewat atribut for="email" dan id="email" -->
                 <div>
                     <label for="email">Alamat Email:</label><br>
                     <input type="email" id="email" name="email" placeholder="nelayan@tarakan.com" required>
@@ -62,7 +79,6 @@
                 
                 <br>
 
-                <!-- Label terikat dengan textarea pesan lewat atribut for="pesan" dan id="pesan" -->
                 <div>
                     <label for="pesan">Pesan / Kendala Alat:</label><br>
                     <textarea id="pesan" name="pesan" rows="4" placeholder="Tuliskan kendala perangkat di sini..." required></textarea>
@@ -77,7 +93,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Teknik Komputer UBT</p>
+        <p>&copy; 2026 Teknik Komputer FT-UBT</p>
     </footer>
 
 </body>
