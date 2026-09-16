@@ -1,4 +1,4 @@
-# Praktikum Pemrograman Web - OBE
+# Praktikum Pemrograman Web
 
 ## Identitas Mata Kuliah
 * **Mata Kuliah:** Pemrograman Web Teknik Komputer FT-UBT
@@ -7,14 +7,19 @@
 * **Angkatan:** 2024
 
 ## Deskripsi Singkat Proyek
-Proyek ini merupakan lembar kerja atau tugas berbasis *Outcome-Based Education* (OBE) untuk Praktikum Pemrograman Web mengenai Struktur HTML5 dan Aksesibilitas Web. Proyek ini berfokus pada **Sistem Informasi Pemantauan Alat Pemanggil Ikan Berbasis Web** yang ditujukan untuk wilayah pesisir Tarakan. Halaman web dirancang menggunakan struktur semantik HTML5 yang bersih, hierarki heading yang logis, pengelolaan aset gambar informatif dan dekoratif, serta formulir kontak yang aksesibel.
+Proyek ini merupakan lembar kerja berbasis *Outcome-Based Education* (OBE) untuk Praktikum Pemrograman Web Modul 3 mengenai **CSS Modern, Responsive Design, Flexbox/Grid, dan Dasar UI/UX**. Proyek ini mengimplementasikan **Sistem Informasi Pemantauan Alat Pemanggil Ikan Berbasis Web** untuk nelayan di Tarakan dengan tema gradasi biru laut yang elegan, responsif di berbagai perangkat, serta aksesibel.
 
-## Catatan Fitur yang Sudah Selesai
-1. **Struktur Semantik HTML5:** Menggunakan elemen standar seperti `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, dan `<footer>`.
-2. **Hierarchy Heading:** Menggunakan satu `<h1>` utama di header, serta `<h2>` dan `<h3>` secara berurutan pada setiap section dan article.
-3. **Aksesibilitas Gambar:** Penerapan atribut `alt` yang jelas pada gambar informatif serta `alt=""` pada gambar dekoratif (logo).
-4. **Formulir & Aksesibilitas Form:** Penambahan form kontak dan laporan kendala yang dilengkapi dengan atribut `label` (`for` dan `id`) yang terikat secara aksesibel.
-5. **Manajemen Versi (Git):** Penerapan branch fitur (`feature/struktur-home`), commit bermakna, hingga proses *merge* ke branch utama (`main`).
+## Catatan Fitur & Desain yang Sudah Selesai (Modul 3)
+1. **CSS Modern & Custom Properties (`:root`):** Menggunakan variabel warna tema, *spacing*, dan *border-radius* secara terpusat, termasuk gradasi biru laut (`--brand-gradient`).
+2. **Flexbox & CSS Grid:** 
+   * **Flexbox** diterapkan pada navigasi (`nav` dengan `flex-wrap: wrap`) agar aman di layar sempit tanpa *horizontal scroll*.
+   * **CSS Grid** diterapkan pada kartu fitur (`.cards` dengan `repeat(auto-fit, minmax(16rem, 1fr)`) untuk tata letak otomatis dari 1 kolom ke 3 kolom.
+3. **Media Query Responsif:** Menggunakan *breakpoint* berbasis kebutuhan konten (`min-width: 48rem`) untuk mengubah struktur *hero section* menjadi tata letak grid berdampingan pada layar yang lebih besar.
+4. **Aksesibilitas Tinggi (`:focus-visible`):** Memastikan seluruh elemen interaktif (link, tombol, input, textarea) memiliki indikator fokus outline yang jelas demi aksesibilitas keyboard.
+
+## Catatan Keputusan Desain (Design Decision)
+* **Pemilihan Tema Warna:** Menggunakan gradasi biru (`#1e3a8a` ke `#38bdf8`) untuk mencerminkan identitas kelautan/pesisir Kota Tarakan sekaligus memberikan kesan profesional pada sistem pemantauan IoT.
+* **Pendekatan Layout Responsif:** Menggunakan fungsi `auto-fit` dan `minmax()` pada CSS Grid agar halaman beradaptasi secara mulus di berbagai perangkat (Mobile 320px, Tablet 768px, hingga Desktop 1024px+) tanpa memunculkan *breakpoint* yang kaku.
 
 ## Cara Menjalankan Proyek Melalui Laragon 5
 1. Pastikan aplikasi **Laragon 5** sudah terinstal di komputer Anda.
@@ -25,5 +30,5 @@ Proyek ini merupakan lembar kerja atau tugas berbasis *Outcome-Based Education* 
 
 ## AI Usage Log
 * **Alat AI yang Digunakan:** Gemini (Google)
-* **Tujuan Penggunaan:** Digunakan sebagai panduan teknis langkah-demi-langkah, konsultasi penulisan struktur semantik HTML5, pengelolaan aksesibilitas form/gambar, serta penyusunan alur commit Git yang baik sesuai modul praktikum.
-* **Bagian yang Dibantu:** Peninjauan kerangka kode HTML5, penerapan atribut aksesibilitas, dan dokumentasi laporan pada file README.
+* **Tujuan Penggunaan:** Digunakan sebagai panduan teknis langkah-demi-langkah, konsultasi penerapan CSS modern, *Flexbox/Grid*, media query responsif, aksesibilitas `:focus-visible`, serta penyusunan dokumentasi laporan dan README.
+* **Bagian yang Dibantu:** Peninjauan kerangka kode CSS, optimalisasi layout responsif, dan penyusunan catatan keputusan desain.

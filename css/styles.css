@@ -1,0 +1,241 @@
+:root {
+    --space-1: .5rem;
+    --space-2: 1rem;
+    --space-3: 2rem;
+    --brand: #4f46e5;
+    --brand-hover: #4338ca;
+    /* Tambahan gradasi biru modern & elegan */
+    --brand-gradient: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #38bdf8 100%);
+    --surface: #ffffff;
+    --background: #f8fafc;
+    --text: #1f2937;
+    --text-muted: #4b5563;
+    --border: #e2e8f0;
+    --radius: .75rem;
+}
+
+/* CSS Reset & Border Box */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container Utama Responsif */
+.container {
+    width: min(100% - 2rem, 72rem);
+    margin-inline: auto;
+}
+
+/* Header & Navigasi menggunakan Gradasi Biru */
+.site-header {
+    background: var(--brand-gradient);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: var(--space-2);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.site-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+nav a {
+    text-decoration: none;
+    color: #f1f5f9;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Fokus Aksesibilitas */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 3px solid #38bdf8;
+    outline-offset: 2px;
+}
+
+/* Layout Konten Utama */
+main.container {
+    flex: 1;
+    padding-block: var(--space-3);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    background: var(--surface);
+    padding: var(--space-3);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.hero-images {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.hero-images img {
+    border-radius: calc(var(--radius) / 2);
+    border: 1px solid var(--border);
+}
+
+/* Layout Card menggunakan CSS Grid */
+.content-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.content-section h2 {
+    font-size: 1.5rem;
+    color: var(--text);
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: var(--space-2);
+}
+
+.card {
+    background-color: var(--surface);
+    padding: var(--space-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+}
+
+.card h3 {
+    color: #2563eb;
+}
+
+/* Form Kontak */
+.contact-form {
+    background-color: var(--surface);
+    padding: var(--space-3);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    max-width: 40rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #2563eb;
+    outline: none;
+}
+
+.btn-submit {
+    background: var(--brand-gradient);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    align-self: flex-start;
+}
+
+.btn-submit:hover {
+    opacity: 0.9;
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--surface);
+    border-top: 1px solid var(--border);
+    padding-block: var(--space-2);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+/* Media Query untuk Layar Lebih Besar / Tablet / Desktop */
+@media (min-width: 48rem) {
+    .hero-section {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        align-items: center;
+    }
+}
