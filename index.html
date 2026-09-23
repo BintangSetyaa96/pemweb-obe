@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="id">
 <head>
@@ -19,8 +20,11 @@
             <nav>
                 <a href="#tentang">Tentang</a>
                 <a href="#fitur">Fitur</a>
+                <a href="#inventaris">Inventaris</a>
                 <a href="#tautan-luar">Dokumentasi</a>
                 <a href="#kontak">Kontak</a>
+                
+                <button id="theme-button" type="button" class="btn-theme">Ganti Tema</button>
             </nav>
         </div>
     </header>
@@ -28,7 +32,7 @@
     <!-- Konten Utama -->
     <main class="container">
         
-        <!-- Hero Section (Responsif Grid/Flex) -->
+        <!-- Hero Section -->
         <section id="tentang" class="hero-section">
             <div class="hero-content">
                 <h2>Tentang Proyek</h2>
@@ -38,19 +42,18 @@
                 </article>
             </div>
             <div class="hero-images">
-                <img src="images/alat-ikan.png" alt="Ilustrasi perangkat keras alat pemanggil ikan yang dipasang di perairan pesisir" width="100%">
-                <img src="images/diagram-sistem.png" alt="Diagram alur komunikasi data IoT pemanggil ikan dengan server pusat Tarakan" width="100%">
+                <img src="images/alat-ikan.png" alt="Ilustrasi perangkat keras alat pemanggil ikan" width="100%">
+                <img src="images/diagram-sistem.png" alt="Diagram alur komunikasi data IoT" width="100%">
             </div>
         </section>
 
-        <!-- Fitur Utama (Menggunakan CSS Grid & Card) -->
+        <!-- Fitur Utama -->
         <section id="fitur" class="content-section">
             <h2>Fitur Utama Sistem</h2>
             <div class="cards">
                 <article class="card">
                     <h3>Dashboard IoT</h3>
                     <p>Memantau status aktif dan non-aktif perangkat di perairan secara real-time.</p>
-                    <img src="images/ornamen-garis.png" alt="" width="100">
                 </article>
                 <article class="card">
                     <h3>Kontrol Jarak Jauh</h3>
@@ -63,6 +66,50 @@
             </div>
         </section>
 
+        <!-- AREA INVENTARIS ALAT -->
+        <section id="inventaris" class="content-section">
+            <h2>Daftar Inventaris Alat</h2>
+            
+            <!-- Toolbar Filter, Pencarian & Limit Halaman -->
+            <div class="toolbar" aria-label="Filter inventaris">
+                <!-- LATIHAN 1: Input Pencarian -->
+                <div class="search-box">
+                    <label for="search">Cari Alat:</label>
+                    <input type="search" id="search" placeholder="Ketik nama alat...">
+                </div>
+
+                <!-- Filter Kondisi -->
+                <div class="filter-box">
+                    <span>Filter:</span>
+                    <button data-filter="Semua" class="btn-filter">Semua</button>
+                    <button data-filter="Baik" class="btn-filter">Baik</button>
+                    <button data-filter="Perlu Cek" class="btn-filter">Perlu Cek</button>
+                </div>
+
+                <!-- LATIHAN 3: Select Limit Item Per Halaman -->
+                <div class="limit-box">
+                    <label for="limit">Tampilkan:</label>
+                    <select id="limit">
+                        <option value="5">5 item</option>
+                        <option value="10">10 item</option>
+                        <option value="20">20 item</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Modal / Card Panel Detail Alat (Hidden by default) -->
+            <div id="panel-detail" class="detail-panel" style="display: none;">
+                <div class="detail-content">
+                    <h3 id="detail-nama">Nama Alat</h3>
+                    <p id="detail-ringkasan">Ringkasan alat akan tampil di sini...</p>
+                    <button id="btn-tutup-detail" type="button" class="btn-filter">Tutup Detail</button>
+                </div>
+            </div>
+
+            <!-- Area Container Daftar Alat -->
+            <section id="daftar-alat" class="cards" aria-live="polite"></section>
+        </section>
+
         <!-- Informasi Pengembang -->
         <section id="tautan-luar" class="content-section">
             <h2>Informasi Pengembang</h2>
@@ -70,7 +117,7 @@
                 <h3>Dokumentasi Kode</h3>
                 <p>Kunjungi repository resmi untuk melihat pembaruan kode sumber proyek ini:</p>
                 <a href="https://github.com/BintangSetyaa96/pemweb-obe" target="_blank" class="btn-link">
-                    <img src="images/banner-github.png" alt="Tautan menuju halaman Repository GitHub proyek sistem pemantauan" width="180">
+                    <img src="images/banner-github.png" alt="Tautan Repository GitHub" width="180">
                 </a>
             </article>
         </section>
@@ -78,31 +125,25 @@
         <!-- Kontak & Laporan Kendala -->
         <section id="kontak" class="content-section">
             <h2>Kontak & Laporan Kendala</h2>
-            <p>Silakan isi form di bawah ini untuk melaporkan kondisi perangkat atau menghubungi pengelola:</p>
-            
             <form class="contact-form">
                 <div class="form-group">
                     <label for="nama">Nama Lengkap:</label>
                     <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
                 </div>
-                
                 <div class="form-group">
                     <label for="email">Alamat Email:</label>
                     <input type="email" id="email" name="email" placeholder="nelayan@tarakan.com" required>
                 </div>
-                
                 <div class="form-group">
                     <label for="pesan">Pesan / Kendala Alat:</label>
                     <textarea id="pesan" name="pesan" rows="4" placeholder="Tuliskan kendala perangkat di sini..." required></textarea>
                 </div>
-                
                 <button type="submit" class="btn-submit">Kirim Laporan</button>
             </form>
         </section>
 
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
             <p>&copy; 2026 Teknik Komputer FT-UBT | Modul Praktikum Pemrograman Web</p>

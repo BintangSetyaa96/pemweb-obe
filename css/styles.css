@@ -239,3 +239,85 @@ main.container {
         align-items: center;
     }
 }
+
+/* =========================================================================
+   STYLING TAMBAHAN PRAKTIKUM MODUL 05
+   ========================================================================= */
+
+/* Dark Theme Preference (localStorage) */
+[data-theme="dark"] {
+    --surface: #1e293b;
+    --background: #0f172a;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+    --border: #334155;
+}
+
+/* Styling Toolbar Filter & Tombol Theme */
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    background-color: var(--surface);
+    padding: 1rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.btn-filter, .btn-theme {
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background-color: var(--background);
+    color: var(--text);
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-filter:hover, .btn-theme:hover {
+    background-color: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    background-color: var(--surface);
+    padding: 1rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.search-box input, .limit-box select {
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background-color: var(--background);
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.detail-panel {
+    background-color: var(--surface);
+    border: 2px solid #2563eb;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.detail-content h3 {
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+}
+
+.detail-content p {
+    margin-bottom: 1rem;
+    color: var(--text);
+}
